@@ -1,0 +1,237 @@
+name: Aeon Venice
+run-name: "venice-skill: ${{ inputs.skill || 'heartbeat' }}${{ inputs.var && format(' ({0})', inputs.var) || '' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      skill:
+        description: 'Skill name (must match a directory under skills/)'
+        required: true
+        type: string
+      model:
+        description: 'Venice model'
+        required: false
+        type: choice
+        default: 'venice-uncensored'
+        options:
+          - 'venice-uncensored'
+          - 'nvidia/kimi-k2.5'
+          - 'nvidia/deepseek-v3.2'
+          - 'meta-llama/llama-3.1-405b-instruct'
+      var:
+        description: 'Variable (e.g. AI, bitcoin, owner/repo)'
+        required: false
+        type: string
+
+  schedule:
+    - cron: '0 7 * * *'   # 7 AM UTC daily
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+  actions: read
+
+env:
+  VENICE_API_KEY: ${{ secrets.VENICE_API_KEY }}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Check Venice API key
+        run: |
+          if [ -z "$VENICE_API_KEY" ]; then
+            echo "::error::VENICE_API_KEY secret is not set"
+            exit 1
+          fi
+          echo "Venice API key configured ✓"
+
+      - name: Read skill file
+        id: skill
+        run: |
+          SKILL_NAME="${{ inputs.skill || 'heartbeat' }}"
+          SKILL_FILE="skills/$SKILL_NAME/SKILL.md"
+          
+          if [ ! -f "$SKILL_FILE" ]; then
+            echo "::error::Skill file not found: $SKILL_FILE"
+            exit 1
+          fi
+          
+          echo "name=$SKILL_NAME" >> "$GITHUB_OUTPUT"
+          echo "file=$SKILL_FILE" >> "$GITHUB_OUTPUT"
+          echo "Skill: $SKILL_NAME ✓"
+
+      - name: Run skill via Venice API
+        id: run
+        env:
+          SKILL_VAR: ${{ inputs.var }}
+        run: |
+          SKILL_NAME="${{ steps.skill.outputs.name }}"
+          SKILL_FILE="${{ steps.skill.outputs.file }}"
+          MODEL="${{ inputs.model }}"
+          VAR="$SKILL_VAR"
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          echo "Running skill: $SKILL_NAME"
+          echo "Model: $MODEL"
+          echo "Date: $TODAY"
+          
+          # Read the skill file
+          SKILL_CONTENT=$(cat "$SKILL_FILE")
+          
+          # Build the prompt
+          PROMPT="Today is $TODAY.
+          
+          You are Aeon, an autonomous agent. Read and execute the following skill:
+          
+          $SKILL_CONTENT"
+          
+          if [ -n "$VAR" ]; then
+            PROMPT="$PROMPT
+          
+          Use this variable: var=$VAR"
+          fi
+          
+          PROMPT="$PROMPT
+          
+          Execute the skill. Be thorough and produce actionable output."
+          
+          # Call Venice API
+          RESPONSE=$(curl -sf -X POST "https://api.venice.ai/api/v1/chat/completions" \
+            -H "Authorization: Bearer $VENICE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --arg model "$MODEL" \
+              --arg prompt "$PROMPT" \
+              '{
+                "model": $model,
+                "messages": [{"role": "user", "content": $prompt}],
+                "max_tokens": 4000
+              }')" 2>&1)
+          
+          if [ $? -ne 0 ]; then
+            echo "::error::Venice API call failed"
+            echo "$RESPONSE" | tail -c 500
+            exit 1
+          fi
+          
+          # Extract result
+          RESULT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
+          
+          if [ -z "$RESULT" ]; then
+            echo "::error::Empty response from Venice API"
+            exit 1
+          fi
+          
+          echo "$RESULT"
+          
+          # Save result
+          echo "$RESULT" > /tmp/skill-result.txt
+          
+          # Extract usage
+          INPUT_TOKENS=$(echo "$RESPONSE" | jq '.usage.input_tokens // 0')
+          OUTPUT_TOKENS=$(echo "$RESPONSE" | jq '.usage.output_tokens // 0')
+          TOTAL_TOKENS=$(echo "$RESPONSE" | jq '.usage.total_tokens // 0')
+          
+          echo "INPUT_TOKENS=$INPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "OUTPUT_TOKENS=$OUTPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "TOTAL_TOKENS=$TOTAL_TOKENS" >> "$GITHUB_OUTPUT"
+          
+          echo "::notice::Token usage — input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, total: $TOTAL_TOKENS"
+
+      - name: Log token usage
+        if: steps.run.outcome == 'success'
+        run: |
+          SKILL="${{ steps.skill.outputs.name }}"
+          INPUT="${{ steps.run.outputs.INPUT_TOKENS }}"
+          OUTPUT="${{ steps.run.outputs.OUTPUT_TOKENS }}"
+          TOTAL="${{ steps.run.outputs.TOTAL_TOKENS }}"
+          
+          echo "## Token Usage: $SKILL" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Metric | Tokens |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|--------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Input | $INPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Output | $OUTPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Total** | **$TOTAL** |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Track token costs
+        if: steps.run.outcome == 'success'
+        run: |
+          CSV="memory/token-usage.csv"
+          mkdir -p memory
+          if [ ! -f "$CSV" ]; then
+            echo "date,skill,model,input_tokens,output_tokens,total_tokens" > "$CSV"
+          fi
+          echo "$(date -u +%Y-%m-%d),${{ steps.skill.outputs.name }},${{ inputs.model }},${{ steps.run.outputs.INPUT_TOKENS }},${{ steps.run.outputs.OUTPUT_TOKENS }},${{ steps.run.outputs.TOTAL_TOKENS }}" >> "$CSV"
+
+      - name: Capture skill output
+        if: steps.run.outcome == 'success'
+        run: |
+          SKILL="${{ steps.skill.outputs.name }}"
+          mkdir -p .outputs
+          
+          if [ -f /tmp/skill-result.txt ] && [ -s /tmp/skill-result.txt ]; then
+            cp /tmp/skill-result.txt ".outputs/${SKILL}.md"
+          else
+            echo "_No output captured._" > ".outputs/${SKILL}.md"
+          fi
+          
+          echo "::notice::Skill output captured to .outputs/${SKILL}.md"
+
+      - name: Commit and push results
+        if: steps.run.outcome == 'success'
+        run: |
+          SKILL="${{ steps.skill.outputs.name }}"
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          # Append to daily log
+          mkdir -p memory/logs
+          echo "" >> "memory/logs/${TODAY}.md"
+          echo "## $SKILL ($(date -u +%H:%M:%SZ))" >> "memory/logs/${TODAY}.md"
+          echo "" >> "memory/logs/${TODAY}.md"
+          cat ".outputs/${SKILL}.md" >> "memory/logs/${TODAY}.md"
+          
+          # Commit
+          git add -A
+          git commit -m "aeon: $SKILL run ($TODAY) — ${{ steps.run.outputs.TOTAL_TOKENS }} tokens" || echo "No changes to commit"
+          git push || echo "Push failed (non-fatal)"
+
+      - name: Notify via Telegram
+        if: steps.run.outcome == 'success' && env.TELEGRAM_BOT_TOKEN != ''
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          SKILL="${{ steps.skill.outputs.name }}"
+          RESULT=$(cat ".outputs/${SKILL}.md" 2>/dev/null | head -c 3000)
+          
+          MSG="🤖 *Aeon Skill Complete*
+          
+          *Skill:* \`$SKILL\`
+          *Date:* $(date -u +%Y-%m-%d)
+          *Tokens:* ${{ steps.run.outputs.TOTAL_TOKENS }}
+          
+          *Output:*
+          $RESULT"
+          
+          curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || echo "Telegram notification failed (non-fatal)"
