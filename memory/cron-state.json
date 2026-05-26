@@ -2,13 +2,13 @@
   "heartbeat": {
     "last_dispatch": "2026-05-22T11:31:43Z",
     "last_status": "failed",
-    "last_failed": "2026-05-26T20:33:27Z",
-    "total_runs": 84,
+    "last_failed": "2026-05-26T22:08:51Z",
+    "total_runs": 85,
     "total_successes": 0,
-    "total_failures": 84,
-    "consecutive_failures": 84,
+    "total_failures": 85,
+    "consecutive_failures": 85,
     "success_rate": 0,
-    "last_error": "903b90b\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "30600c1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "on-chain-monitor": {
     "last_dispatch": "2026-05-22T11:31:43Z",
