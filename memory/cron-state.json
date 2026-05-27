@@ -45,13 +45,13 @@
   },
   "token-movers": {
     "last_status": "failed",
-    "last_failed": "2026-05-27T19:03:34Z",
-    "total_runs": 77,
+    "last_failed": "2026-05-27T21:06:59Z",
+    "total_runs": 78,
     "total_successes": 0,
-    "total_failures": 77,
-    "consecutive_failures": 77,
+    "total_failures": 78,
+    "consecutive_failures": 78,
     "success_rate": 0,
-    "last_error": "52fb2ba\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "c30bfbd\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-monitor": {
     "last_status": "failed",
