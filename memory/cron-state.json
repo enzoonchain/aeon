@@ -65,12 +65,12 @@
   },
   "cost-report": {
     "last_status": "failed",
-    "last_failed": "2026-06-11T00:13:38Z",
-    "total_runs": 193,
+    "last_failed": "2026-06-11T05:00:18Z",
+    "total_runs": 194,
     "total_successes": 0,
-    "total_failures": 193,
-    "consecutive_failures": 193,
+    "total_failures": 194,
+    "consecutive_failures": 194,
     "success_rate": 0,
-    "last_error": "ab79c11\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "610d4f8\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   }
 }
