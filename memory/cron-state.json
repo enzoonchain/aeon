@@ -35,13 +35,13 @@
   "morning-brief": {
     "last_dispatch": "2026-06-17T21:21:58Z",
     "last_status": "failed",
-    "last_failed": "2026-06-18T00:13:39Z",
-    "total_runs": 323,
+    "last_failed": "2026-06-18T05:04:12Z",
+    "total_runs": 324,
     "total_successes": 0,
-    "total_failures": 323,
-    "consecutive_failures": 323,
+    "total_failures": 324,
+    "consecutive_failures": 324,
     "success_rate": 0,
-    "last_error": "9fd91f1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "de4bb82\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-movers": {
     "last_status": "dispatched",
