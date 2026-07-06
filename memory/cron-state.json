@@ -24,13 +24,13 @@
   "skill-health": {
     "last_dispatch": "2026-06-18T21:07:19Z",
     "last_status": "failed",
-    "last_failed": "2026-07-06T13:28:37Z",
-    "total_runs": 547,
+    "last_failed": "2026-07-06T16:38:55Z",
+    "total_runs": 548,
     "total_successes": 0,
-    "total_failures": 547,
-    "consecutive_failures": 547,
+    "total_failures": 548,
+    "consecutive_failures": 548,
     "success_rate": 0,
-    "last_error": "9f96b63\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "b4d0461\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "morning-brief": {
     "last_dispatch": "2026-06-19T11:12:58Z",
