@@ -13,13 +13,13 @@
   "on-chain-monitor": {
     "last_dispatch": "2026-06-19T11:12:58Z",
     "last_status": "failed",
-    "last_failed": "2026-07-11T11:57:20Z",
-    "total_runs": 655,
+    "last_failed": "2026-07-11T13:20:32Z",
+    "total_runs": 656,
     "total_successes": 0,
-    "total_failures": 655,
-    "consecutive_failures": 655,
+    "total_failures": 656,
+    "consecutive_failures": 656,
     "success_rate": 0,
-    "last_error": "bfed8a7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_error": "f3b7e52\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
     "last_dispatch": "2026-06-18T21:07:19Z",
