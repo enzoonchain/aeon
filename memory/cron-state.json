@@ -11,8 +11,8 @@
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-07-30T09:16:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-30T15:17:20Z",
+    "last_status": "dispatched",
     "last_failed": "2026-07-30T13:00:17Z",
     "total_runs": 1009,
     "total_successes": 0,
@@ -22,8 +22,8 @@
     "last_error": ",\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{}"
   },
   "skill-health": {
-    "last_dispatch": "2026-07-30T09:16:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-30T15:17:20Z",
+    "last_status": "dispatched",
     "last_failed": "2026-07-30T13:00:05Z",
     "total_runs": 954,
     "total_successes": 0,
@@ -33,8 +33,8 @@
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
   "morning-brief": {
-    "last_dispatch": "2026-07-30T09:16:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-30T15:17:20Z",
+    "last_status": "dispatched",
     "last_failed": "2026-07-30T13:00:25Z",
     "total_runs": 933,
     "total_successes": 0,
@@ -44,7 +44,7 @@
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
   "token-movers": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-07-30T13:00:16Z",
     "total_runs": 930,
     "total_successes": 0,
@@ -52,10 +52,10 @@
     "consecutive_failures": 930,
     "success_rate": 0,
     "last_error": ",\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{}",
-    "last_dispatch": "2026-07-30T00:57:58Z"
+    "last_dispatch": "2026-07-30T15:17:20Z"
   },
   "defi-monitor": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-07-30T13:00:16Z",
     "total_runs": 971,
     "total_successes": 0,
@@ -63,7 +63,7 @@
     "consecutive_failures": 971,
     "success_rate": 0,
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{",
-    "last_dispatch": "2026-07-30T09:16:28Z"
+    "last_dispatch": "2026-07-30T15:17:20Z"
   },
   "cost-report": {
     "last_status": "dispatched",
