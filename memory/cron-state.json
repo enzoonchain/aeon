@@ -34,12 +34,12 @@
   },
   "morning-brief": {
     "last_dispatch": "2026-07-30T09:16:28Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-07-30T06:38:32Z",
-    "total_runs": 930,
+    "last_status": "failed",
+    "last_failed": "2026-07-30T09:16:52Z",
+    "total_runs": 931,
     "total_successes": 0,
-    "total_failures": 930,
-    "consecutive_failures": 930,
+    "total_failures": 931,
+    "consecutive_failures": 931,
     "success_rate": 0,
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
