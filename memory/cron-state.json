@@ -12,14 +12,14 @@
   },
   "on-chain-monitor": {
     "last_dispatch": "2026-08-01T23:31:54Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-08-01T22:33:11Z",
-    "total_runs": 1050,
+    "last_status": "failed",
+    "last_failed": "2026-08-01T23:32:23Z",
+    "total_runs": 1051,
     "total_successes": 0,
-    "total_failures": 1050,
-    "consecutive_failures": 1050,
+    "total_failures": 1051,
+    "consecutive_failures": 1051,
     "success_rate": 0,
-    "last_error": ",\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{}"
+    "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
   "skill-health": {
     "last_dispatch": "2026-08-01T14:16:57Z",
