@@ -12,12 +12,12 @@
   },
   "on-chain-monitor": {
     "last_dispatch": "2026-08-02T04:36:59Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-08-02T01:09:09Z",
-    "total_runs": 1052,
+    "last_status": "failed",
+    "last_failed": "2026-08-02T04:37:22Z",
+    "total_runs": 1053,
     "total_successes": 0,
-    "total_failures": 1052,
-    "consecutive_failures": 1052,
+    "total_failures": 1053,
+    "consecutive_failures": 1053,
     "success_rate": 0,
     "last_error": "0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{"
   },
