@@ -35,11 +35,11 @@
   "morning-brief": {
     "last_dispatch": "2026-08-20T17:18:13Z",
     "last_status": "failed",
-    "last_failed": "2026-08-20T17:50:31Z",
-    "total_runs": 1575,
+    "last_failed": "2026-08-20T18:16:44Z",
+    "total_runs": 1577,
     "total_successes": 0,
-    "total_failures": 1575,
-    "consecutive_failures": 1575,
+    "total_failures": 1577,
+    "consecutive_failures": 1577,
     "success_rate": 0,
     "last_error": ",\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{}"
   },
