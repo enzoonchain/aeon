@@ -23,14 +23,14 @@
   },
   "skill-health": {
     "last_dispatch": "2026-08-21T08:43:51Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-08-20T16:52:48Z",
-    "total_runs": 1468,
+    "last_status": "failed",
+    "last_failed": "2026-08-21T08:44:11Z",
+    "total_runs": 1470,
     "total_successes": 0,
-    "total_failures": 1468,
-    "consecutive_failures": 1468,
+    "total_failures": 1470,
+    "consecutive_failures": 1470,
     "success_rate": 0,
-    "last_error": ",\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{}"
+    "last_error": "disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":"
   },
   "morning-brief": {
     "last_dispatch": "2026-08-21T08:43:51Z",
