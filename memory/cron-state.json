@@ -34,12 +34,12 @@
   },
   "morning-brief": {
     "last_dispatch": "2026-08-21T10:25:53Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-08-21T09:55:52Z",
-    "total_runs": 1601,
+    "last_status": "failed",
+    "last_failed": "2026-08-21T10:26:15Z",
+    "total_runs": 1602,
     "total_successes": 0,
-    "total_failures": 1601,
-    "consecutive_failures": 1601,
+    "total_failures": 1602,
+    "consecutive_failures": 1602,
     "success_rate": 0,
     "last_error": "disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":"
   },
