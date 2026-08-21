@@ -1,14 +1,14 @@
 {
   "heartbeat": {
     "last_dispatch": "2026-08-21T07:12:59Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-08-20T21:36:13Z",
-    "total_runs": 1435,
+    "last_status": "failed",
+    "last_failed": "2026-08-21T13:15:15Z",
+    "total_runs": 1436,
     "total_successes": 0,
-    "total_failures": 1435,
-    "consecutive_failures": 1435,
+    "total_failures": 1436,
+    "consecutive_failures": 1436,
     "success_rate": 0,
-    "last_error": "disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":"
+    "last_error": "isabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0"
   },
   "on-chain-monitor": {
     "last_dispatch": "2026-08-21T11:51:00Z",
