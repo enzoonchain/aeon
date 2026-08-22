@@ -1,6 +1,6 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-08-21T20:08:46Z",
+    "last_dispatch": "2026-08-22T07:24:11Z",
     "last_status": "dispatched",
     "last_failed": "2026-08-21T19:50:14Z",
     "total_runs": 1445,
@@ -11,8 +11,8 @@
     "last_error": "isabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0"
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-08-22T06:53:27Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-22T07:24:11Z",
+    "last_status": "dispatched",
     "last_failed": "2026-08-22T06:53:49Z",
     "total_runs": 1764,
     "total_successes": 0,
@@ -33,8 +33,8 @@
     "last_error": "disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":"
   },
   "morning-brief": {
-    "last_dispatch": "2026-08-22T06:53:27Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-22T07:24:11Z",
+    "last_status": "dispatched",
     "last_failed": "2026-08-22T06:53:51Z",
     "total_runs": 1634,
     "total_successes": 0,
@@ -55,7 +55,7 @@
     "last_dispatch": "2026-08-21T14:42:38Z"
   },
   "defi-monitor": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-08-22T06:53:42Z",
     "total_runs": 1685,
     "total_successes": 0,
@@ -63,7 +63,7 @@
     "consecutive_failures": 1685,
     "success_rate": 0,
     "last_error": "isabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0",
-    "last_dispatch": "2026-08-22T06:53:27Z"
+    "last_dispatch": "2026-08-22T07:24:11Z"
   },
   "cost-report": {
     "last_status": "dispatched",
