@@ -24,13 +24,13 @@
   "skill-health": {
     "last_dispatch": "2026-08-23T08:42:31Z",
     "last_status": "failed",
-    "last_failed": "2026-08-26T10:21:17Z",
-    "total_runs": 1584,
+    "last_failed": "2026-08-26T10:56:11Z",
+    "total_runs": 1585,
     "total_successes": 0,
-    "total_failures": 1584,
-    "consecutive_failures": 1584,
+    "total_failures": 1585,
+    "consecutive_failures": 1585,
     "success_rate": 0,
-    "last_error": "pt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{"
+    "last_error": "opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":"
   },
   "morning-brief": {
     "last_dispatch": "2026-08-24T07:41:15Z",
