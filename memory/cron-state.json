@@ -24,11 +24,11 @@
   "skill-health": {
     "last_dispatch": "2026-08-23T08:42:31Z",
     "last_status": "failed",
-    "last_failed": "2026-09-11T23:17:10Z",
-    "total_runs": 1716,
+    "last_failed": "2026-09-12T01:12:37Z",
+    "total_runs": 1717,
     "total_successes": 0,
-    "total_failures": 1716,
-    "consecutive_failures": 1716,
+    "total_failures": 1717,
+    "consecutive_failures": 1717,
     "success_rate": 0,
     "last_error": "requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"dep"
   },
