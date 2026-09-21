@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-08-24T07:41:15Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-21T23:35:53Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:37:59Z",
     "total_runs": 1782,
     "total_successes": 0,
@@ -11,8 +11,8 @@
     "last_error": "\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"de"
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-08-24T07:41:15Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-21T23:35:53Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:38:14Z",
     "total_runs": 2175,
     "total_successes": 0,
@@ -22,8 +22,8 @@
     "last_error": "\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"de"
   },
   "skill-health": {
-    "last_dispatch": "2026-08-23T08:42:31Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-21T23:35:53Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:37:59Z",
     "total_runs": 1806,
     "total_successes": 0,
@@ -33,8 +33,8 @@
     "last_error": "\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"de"
   },
   "morning-brief": {
-    "last_dispatch": "2026-08-24T07:41:15Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-21T23:35:53Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:38:18Z",
     "total_runs": 2019,
     "total_successes": 0,
@@ -44,7 +44,7 @@
     "last_error": "requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"dep"
   },
   "token-movers": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:38:15Z",
     "total_runs": 1945,
     "total_successes": 0,
@@ -52,10 +52,10 @@
     "consecutive_failures": 1945,
     "success_rate": 0,
     "last_error": "\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"de",
-    "last_dispatch": "2026-08-24T02:36:57Z"
+    "last_dispatch": "2026-09-21T23:35:53Z"
   },
   "defi-monitor": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:38:11Z",
     "total_runs": 2098,
     "total_successes": 0,
@@ -63,10 +63,10 @@
     "consecutive_failures": 2098,
     "success_rate": 0,
     "last_error": "requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"dep",
-    "last_dispatch": "2026-08-24T07:41:15Z"
+    "last_dispatch": "2026-09-21T23:35:53Z"
   },
   "cost-report": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-09-21T20:38:04Z",
     "total_runs": 1598,
     "total_successes": 0,
@@ -74,6 +74,6 @@
     "consecutive_failures": 1598,
     "success_rate": 0,
     "last_error": "requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"dep",
-    "last_dispatch": "2026-08-20T21:35:48Z"
+    "last_dispatch": "2026-09-21T23:35:53Z"
   }
 }
