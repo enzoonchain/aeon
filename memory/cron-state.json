@@ -13,11 +13,11 @@
   "on-chain-monitor": {
     "last_dispatch": "2026-09-21T23:35:53Z",
     "last_status": "failed",
-    "last_failed": "2026-10-08T20:15:17Z",
-    "total_runs": 2275,
+    "last_failed": "2026-10-09T00:26:07Z",
+    "total_runs": 2276,
     "total_successes": 0,
-    "total_failures": 2275,
-    "consecutive_failures": 2275,
+    "total_failures": 2276,
+    "consecutive_failures": 2276,
     "success_rate": 0,
     "last_error": "ground\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"conc"
   },
